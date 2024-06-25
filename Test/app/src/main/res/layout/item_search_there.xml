@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/custom_input">
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginHorizontal="20sp"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@+id/input_to"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_to" />
+
+    <ImageView
+        android:id="@+id/fly"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginHorizontal="20sp"
+        android:src="@drawable/fly"
+        app:layout_constraintBottom_toBottomOf="@+id/input_from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_from" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_from"
+        style="@style/MyTextInputLayout"
+        android:layout_width="0sp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginVertical="20sp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:text="@string/city_5"
+        app:layout_constraintBottom_toTopOf="@+id/view_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search" />
+
+    <EditText
+        android:id="@+id/input_to"
+        style="@style/MyTextInputLayout"
+        android:layout_width="0sp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginVertical="20sp"
+        android:background="@android:color/transparent"
+        android:hint="@string/where_to_türkiye"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/delete"
+        app:layout_constraintBottom_toBottomOf="@+id/input_to"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_to" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

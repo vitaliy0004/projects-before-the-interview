@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/teal_700">
+
+    <ImageView
+        android:id="@+id/lens"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="10sp"
+        android:layout_marginStart="20sp"
+        android:src="@drawable/lens"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/company_flight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:text="@string/airlines"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/lens"
+        app:layout_constraintTop_toTopOf="@+id/lens" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/company_flight">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/price"
+            android:textColor="@color/purple_200"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/keyboard_arrow" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10sp"
+        android:maxLength="35"
+        android:maxLines="1"
+        android:text="@string/times"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/company_flight"
+        app:layout_constraintTop_toBottomOf="@+id/company_flight" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginVertical="10sp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="@+id/text_time"
+        app:layout_constraintStart_toStartOf="@+id/lens"
+        app:layout_constraintTop_toBottomOf="@+id/text_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
